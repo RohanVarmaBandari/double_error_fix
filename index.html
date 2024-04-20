@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rohan Watch Company</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: linear-gradient(45deg, #282c34, #4c566a); color: #fff; } /* Adjusted background for better contrast */
+        .header, .footer { text-align: center; padding: 1em; }
+        .main-content { padding: 20px; }
+        .watch { margin-bottom: 20px; }
+        .watch-image { width: 100%; max-width: 300px; height: auto; }
+        .watch-description { margin-top: 5px; }
+        .footer { background: #2e3440; color: #d8dee9; } /* Adjusted background and text color for footer */
+        .button {
+            background-color: #5e81ac; /* Adjusted button background color for higher contrast */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Rohan Watch Company</h1>
+        <button class="button" onclick="showHomePage()">Home</button>
+        <button class="button" onclick="showItemsPage()">Items</button>
+        <button class="button" onclick="showPricePage()">Prices</button>
+    </div>
+
+    <div class="main-content" id="main-content">
+        <h2>Welcome to Rohan Watch Company</h2>
+        <!-- Placeholder for dynamic content -->
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Rohan Watch Company</p>
+        <p>Follow us on social media for updates.</p>
+    </div>
+
+    <script>
+        function showHomePage() {
+            document.getElementById("main-content").innerHTML = `
+                <h2>Our Collection</h2>
+                <div class="watch">
+                    <img src="watch_image_url.jpg" alt="Watch Image" class="watch-image"/>
+                    <p class="watch-description">A beautiful watch description.</p>
+                </div>
+                <!-- Add more watches as needed -->
+            `;
+        }
+
+        function showItemsPage() {
+            document.getElementById("main-content").innerHTML = `
+                <h2>Available Watches</h2>
+                <!-- Dynamic list of watches -->
+            `;
+        }
+
+        function showPricePage() {
+            document.getElementById("main-content").innerHTML = `
+                <h2>Price List</h2>
+                <!-- Dynamic price listing -->
+            `;
+        }
+
+        // Initially load the Home page content
+        showHomePage();
+    </script>
+</body>
+</html>
